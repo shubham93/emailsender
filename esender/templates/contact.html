@@ -1,9 +1,9 @@
- <html>
+<html>
 <head>
     <title>Contact us</title>
 </head>
 <body>
-    <h1>Contact us</h1>
+    <h1>Email-Sender</h1>
 
     {% if errors %}
         <ul>
@@ -16,7 +16,7 @@
     <form action="" method="post">
         {% csrf_token %}
         <p>Subject: <input type="text" name="subject"></p>
-        <p>Your e-mail (optional): <input type="text" name="email"></p>
+        <p> e-mail : <input type="text" name="email"></p>
         <p>Message:<br/>
         <p><textarea name="message" rows="10" cols="50"></textarea></p>
         <input type="submit" value="Submit">
