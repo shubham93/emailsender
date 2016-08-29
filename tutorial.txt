@@ -1,0 +1,56 @@
+--Tutorials--
+
+1.> Getting Started with django
+
+a.Download Install python 3.5.2 from https://www.python.org/downloads/
+b.Install pip by running "python get-pip.py" at the command prompt
+c.Install django by "pip install -e django"
+
+
+2.> Creating The project Files
+
+a. Create the project under the required directory by"django-admin startproject emailsender"
+b. This creates a variety of files required for the project. Now initialise the app by 
+    "python manage.py startapp esender"
+c. Add the required url in  esender/urls.py(see esender/urls.py for syntax")
+d. Add the urls from esender/urls.py to emailsender/urls.py(see syntax in semail/urls.py)
+
+
+3.> Creatig the template and form for email-sending
+a. Create a folder templates in esender and create the html file of the contact form.
+   Keep in mind that errors would also be displayed if found (use {{% if errors %}}(see esender/contac.html)
+b. You can either write the form in the html file itself or make forms.py for the form and import it from there.
+
+4.> Views and Model Files
+
+a. Edit the views.py including get_template from template.loader and HttpResponseRedirect, HttpResponse, send_mail(see esender/views.py)
+b.Create an errors list errors[] to append all the errors if existing in the form.
+c.Send the mail using send_mail(subject,message,from email, to email).From email will be imported from settings.py (refer next section).
+d.create the model file including subject message and to emails
+
+5.>Settings and Admin File
+
+a.> Edit emailsender/Settings.py including  EMAIL_USE_TLS = True
+                                EMAIL_HOST='smtp.gmail.com'
+                                EMAIL_HOST_USER = 'your id'
+                                EMAIL_HOST_PASSWORD = 'your pass'
+                                EMAIL_PORT = 587 
+b. Import EMAIL_HOST_USER in views.py
+c. In the Installed apps section add 'esender.apps.EsenderConfig',
+d. Edit admin.py by adding admin.site.register(email_data)
+                           AdminSite.site_url='\esender\email'
+to add the url in admin site and the model.
+
+6.> Running the app
+
+a.Go to the directory in the cmd prompt and run the following cmds
+
+-- python manage.py makemigrations.py
+-- python manage.py migrate
+-- python manage.py runserver
+-- python manage.py createsuperuser
+enter the username and password
+
+open http://127.0.0.1:8000/admin to run the app
+
+b. click on view site

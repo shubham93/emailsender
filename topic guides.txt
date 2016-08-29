@@ -1,0 +1,34 @@
+-- Topic Guides--
+
+Information about different files in django
+
+--https://teamtreehouse.com/library/django-basics
+
+
+Creating a web form 
+
+
+The basic steps involved in creating a form and allowing users to enter data via the form is as follows.
+
+    If you haven’t already got one, create a forms.py file within your Django application’s directory to store form-related classes.
+    Create a ModelForm class for each model that you wish to represent as a form.
+    Customise the forms as you desire.
+    Create or update a view to handle the form - including displaying the form, saving the form data, and flagging up errors which may occur when the user enters incorrect data (or no data at all) in the form.
+    Create or update a template to display the form.
+    Add a urlpattern to map to the new view (if you created a new one).
+
+
+Linking the Database
+
+
+--https://docs.djangoproject.com/en/1.10/intro/tutorial02/
+
+
+
+Sending the Mail
+
+
+--https://docs.djangoproject.com/en/1.10/topics/email/
+
+
+

@@ -1,0 +1,21 @@
+Basic Errors encountered
+
+1. Url not found 
+
+  sol- add the url to emailsender/urls.py
+
+2. Query dict object not callable
+
+ sol -use request.POST[] instead of request.POST.get
+
+3. tempelate does not exist
+
+sol - create the tempelate in the templates folder in the same directory. Also import get_template from template.loader
+
+4. incorrect indent
+
+sol - make sure the python file is in correct indentation according to the different functions
+
+5. to Send mail to multiple person use email_list
+
+--email_list=request.POST['email'].split(",") (, indicates next email)

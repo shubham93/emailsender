@@ -1,0 +1,14 @@
+-- Reference Guides--
+
+Information about different files in django
+
+--https://teamtreehouse.com/library/django-basics
+
+
+Django and python information
+--Python in more detail: http://www.diveintopython3.net
+--Django docs: http://docs.djangoproject.com/ 
+
+
+
+
