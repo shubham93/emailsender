@@ -1,0 +1,14 @@
+Instructions
+
+softwares required - python 3.5
+                     django 1.1
+
+After downloading and unzipping,go the directory where you have saved emailsender
+
+-- open cmd prompt and go to the required directory where you havee saved.
+-- open emailsender/settings.py and add your username to EMAIL_HOST_USER and password to EMAIL_HOST_PASSWORD and save the changes.
+-- run python manage.py migrate
+-- run python manage.py runserver
+-- go to http://http://127.0.0.1:8000/admin and enter your django login user and password.(if admin is not registered, run python manage.py createsuperuser and enter the username and password to create it)
+-- go to Email-Sender and go to view site to send the mail
+-- check the tuples in email data object getting saved to the databse.
